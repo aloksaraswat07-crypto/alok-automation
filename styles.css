@@ -1,58 +1,53 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+:root{
+  --bg:#05060a;
+  --card:#0b0d12;
+  --muted:#9aa6b2;
+  --neon:#00e6ff;
+  --accent:#7c3aed;
+  --glass: rgba(255,255,255,0.03);
 }
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
+body{background:linear-gradient(180deg,#020204 0%, #071021 100%);color:#dbeafe;min-height:100vh}
+.container{max-width:1100px;margin:24px auto;padding:20px}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:transparent}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--neon),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#020617}
+.sub{color:var(--muted);font-size:13px}
+.nav a{color:var(--muted);margin-left:14px;text-decoration:none}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center;margin-top:20px;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,0.6)}
+.hero-left h2{font-size:28px;margin-bottom:10px;color:#e6f7ff}
+.hero-left p{color:var(--muted);margin-bottom:14px;max-width:560px}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.btn.neon{background:linear-gradient(90deg,var(--neon),var(--accent));color:#00101a;box-shadow:0 6px 30px rgba(124,58,237,0.12);}
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
+.chat-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.tag{font-size:12px;color:var(--muted);margin-bottom:8px}
+.chat{background:var(--card);padding:10px;border-radius:10px}
+.msg{padding:10px;border-radius:8px;margin-bottom:8px;font-size:14px;max-width:85%}
+.msg.user{background:linear-gradient(90deg, rgba(0,0,0,0.2), rgba(0,0,0,0.15));color:#cfe9ff;align-self:flex-start}
+.msg.bot{background:linear-gradient(90deg, rgba(0,0,0,0.02), rgba(255,255,255,0.02));border-left:3px solid var(--neon);color:#dffaff;align-self:flex-end}
 
-.products {
-    padding: 30px 20px;
-}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
 
-.products h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+.how{margin-top:20px;background:var(--card);padding:18px;border-radius:12px}
+.how ol{color:var(--muted);margin-top:10px;list-style:decimal;}
 
-.product-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.price-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px;text-align:center}
+.price{font-size:20px;color:var(--neon);font-weight:700;margin:8px 0}
 
-.product {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+.contact{margin-top:20px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px}
+.contact-row{display:flex;align-items:center;gap:12px;margin-top:10px}
+.link{color:var(--muted);text-decoration:none}
+.email{color:var(--muted);margin-top:10px}
+.footer{text-align:center;color:var(--muted);margin-top:22px;padding-bottom:40px}
 
-.product h3 {
-    margin-top: 0;
-}
-
-.price {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #222;
-    font-size: 18px;
-}
-
-footer {
-    margin-top: 40px;
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
+/* responsive */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding:16px}
+  .cards{grid-template-columns:1fr}
+  .pricing{grid-template-columns:1fr}
+  .nav{display:none}
 }
