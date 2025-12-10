@@ -1,10 +1,2 @@
-// Replace with your full international number (country code + number). Example: 919876543210
-const WHATSAPP_NUMBER = '917206107433';
-
-document.getElementById('waBtn').addEventListener('click', () => {
-  const message = encodeURIComponent('Hi Alok, I want a free demo for WhatsApp automation. My business: ');
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-  window.open(url, '_blank');
-});
-
-document.getElementById('ctaDemo').addEventListener('click', () => document.getElementById('waBtn').click());
+// Ready for future interactive features
+console.log("Website loaded successfully.");
